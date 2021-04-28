@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DoorDash</string>
+    <string name="restaurant_picture">Restaurant Picture</string>
+    <string name="restaurant_name">Name</string>
+</resources>

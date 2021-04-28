@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_side_margin">12dp</dimen>
+    <dimen name="default_margin">16dp</dimen>
+    <dimen name="default_margin_double">32dp</dimen>
+    <dimen name="default_margin_half">8dp</dimen>
+    <dimen name="default_margin_one_and_half">24dp</dimen>
+    <dimen name="default_margin_quarter">4dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
+    <dimen name="default_padding_half">8dp</dimen>
+    <dimen name="default_padding_quarter">4dp</dimen>
+    <dimen name="default_padding_three_quarter">12dp</dimen>
+    <dimen name="default_padding_one_and_half">24dp</dimen>
+    <dimen name="header_margin">72dp</dimen>
+    <dimen name="restaurant_image_width_height">80dp</dimen>
+    <dimen name="restaurant_name_textSize">20sp</dimen>
+    <dimen name="restaurant_name_maxWidth">220dp</dimen>
+</resources>

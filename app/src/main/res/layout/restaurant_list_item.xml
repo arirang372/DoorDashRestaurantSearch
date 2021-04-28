@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.sung.doordash.model.Restaurant" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/default_padding">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/restaurant_image_width_height"
+            android:layout_height="@dimen/restaurant_image_width_height"
+            android:layout_margin="@dimen/default_margin_half"
+            android:contentDescription="@string/restaurant_picture"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:url="@{model.coverImageUrl}"
+            tools:srcCompat="@android:drawable/presence_online" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_half"
+            android:maxWidth="@dimen/restaurant_name_maxWidth"
+            android:text="@{model.name}"
+            android:textSize="@dimen/restaurant_name_textSize"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/asapMinute"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_half"
+            android:maxWidth="@dimen/restaurant_name_maxWidth"
+            android:text="@{model.description}"
+            app:layout_constraintEnd_toStartOf="@+id/asapMinute"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            tools:text="Description" />
+
+        <TextView
+            android:id="@+id/asapMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin_half"
+            android:text="@{model.status.storeOpen? model.status.asapMins[0] + ` min` : `Closed`}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:text="22 min" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
